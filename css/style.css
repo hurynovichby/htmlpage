@@ -290,9 +290,11 @@ a:hover {
 .main__form-range label {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 16px;
 }
 .main__form-range input[type="range"] {
-  width: 97%;
+  width: 100%;
+  padding: 0;
 }
 .main__form-submit {
   grid-column-start: 2;
@@ -331,4 +333,31 @@ a:hover {
 	display: block;
 	width: 0;
 	height: 0;
+}
+
+input[type=range] {
+  height: 4px;
+  -webkit-appearance: none;
+  width: 100%;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  cursor: pointer;
+  animate: 0.2s;
+  height: 6px;
+  border: solid 1px #fff;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+input[type=range]::-webkit-slider-thumb {
+  cursor: pointer;
+  -webkit-appearance: none;
+  width: 23.7px;
+  height: 23.7px;
+  border: solid 3px #286690;
+  background-color: var(--primary);
+  border-radius: 50%;
+  margin-top: -10px;
 }
